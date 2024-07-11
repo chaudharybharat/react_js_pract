@@ -3,6 +3,8 @@ import ListGroup from "./components/ListGroup";
 import './App.css'
 import Alert from './components/Alert';
 import Button from './components/Button';
+import Navbar from './components/Navbar';
+import TextFrom from './components/TextFrom';
 
 function App() {
   let items =[
@@ -20,11 +22,17 @@ function App() {
  }
  
   return (
-    <div>
-      <ListGroup heading='Contry List' items={items} onSelectItem={handleSelectItem}/>
-       <Alert> Hello<h1>sg</h1> <span>Worlgd</span></Alert>
-       <Button color='primary' OnClick={()=>console.log("click here")}>Button</Button>
-    </div> 
+    <>
+    
+   <Navbar title='TextUtile'/>
+   <div className='container'>  <TextFrom/></div>
+   
+    </>
+    // <div>
+    //   <ListGroup heading='Contry List' items={items} onSelectItem={handleSelectItem}/>
+    //    <Alert> Hello<h1>sg</h1> <span>Worlgd</span></Alert>
+    //    <Button color='primary' OnClick={()=>console.log("click here")}>Button</Button>
+    // </div> 
   )
 }
 
