@@ -7,7 +7,7 @@ interface Props{
 }
 
 function TextFrom(props:Props) {
-  const[text,setText] =useState('Enter text here');
+  const[text,setText] =useState('');
 const handleUpclick=()=>{
   let newText=text.toUpperCase();
   setText(newText);
@@ -24,10 +24,12 @@ const handleOnChange=(event)=>{
 <div className="mb-3">
   <h2>{props.heading}</h2>
   <label htmlFor="exampleFormControlTextarea1" className="form-label">Example textarea</label>
-  <textarea className="form-control" value={text} onChange={handleOnChange} id="exampleFormControlTextarea1" aria-rowcount="3"></textarea>
+  <textarea className="form-control" placeholder="Type here..." value={text} onChange={handleOnChange} id="exampleFormControlTextarea1" aria-rowcount="3"></textarea>
 </div>
 <button className="btn btn-primary" onClick={handleUpclick}>Convert to Uppercase</button>
+<button className="btn btn-secondary" onClick={()=>setText("")}>Clear</button>
     </div>
+    
   )
 }
 
