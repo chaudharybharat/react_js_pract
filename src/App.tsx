@@ -25,7 +25,7 @@ function App() {
     <>
     
    <Navbar title='TextUtile'/>
-   <div className='container'>  <TextFrom/></div>
+   <div className='container'>  <TextFrom heading='Enter the text to analyze' /></div>
    
     </>
     // <div>
